@@ -12,7 +12,7 @@ body {
       font-size: 1.5rem;
   }
 
-  .logo {
+  .logo, .btn-author {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -47,7 +47,6 @@ body {
     align-items: center;
     position: relative;
     overflow: hidden;
-    cursor: pointer;
   }
 
    .card>* {
@@ -70,10 +69,12 @@ body {
    .card:hover::before {
     backdrop-filter: blur(0);
   }
-  
-   .btn {
+
+ 
+   .btn, .btn-author {
       min-width: 30px;
       height: 30px;
+      padding: 5px;
       box-shadow: 0 0 2px 0 #0002;
       border-radius: 10px;
       display: flex;
@@ -103,7 +104,7 @@ body {
     color:#7B8E98;   
  }
  
-.popup-wrapper {
+.popup-wrapper, .form_author {
     position: fixed;
     top: 0;
     left: 0;
@@ -138,7 +139,7 @@ body {
    display: block; 
 }
 
-.popup-close {
+.popup-close,  .author_form-close {
     width: max-content;
     position:absolute;
     top: 10px;
@@ -214,6 +215,37 @@ form button:active {
     box-shadow: 0 0 2px 0 #0004;
 }
 
+.btn-author {
+    cursor: pointer;
+  }
+  
+.form_author.active {
+    display: flex;
+}
+
+.form_author_style {
+    display: flex;
+    flex-direction:column;
+}
+
+.author {
+    width: calc(100% - 20px);
+    max-height: calc(100% - 20px);
+    overflow-y: auto;
+    box-sizing: border-box;
+    max-width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 2px 0 #0004;
+    position: relative;
+    display: none;
+}
+.author.active {
+    display: block; 
+ }
+ 
+  
   @media (min-width: 768px) {
      main {
         grid-template-columns: repeat(2, 1fr);
@@ -236,3 +268,8 @@ form button:active {
          padding: 30px calc(50% - 600px);
       }
   }
+
+  
+
+
+

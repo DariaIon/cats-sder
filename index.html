@@ -8,12 +8,14 @@
          integrity = "sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
          crossorigin = "anonymous" referrerpolicy="no-referrer" />
         <link rel = "stylesheet" href = "style.css">
+        <link rel = "stylesheet" href = "styles/cats-info.css">
         <script src = "scripts/api.js"></script>
     </head>
     <body>
         <header>
             <a href = "" class = "logo"><i class = "fa-solid fa-paw fa-2x"></i>Милые котики</a>
             <a class = "btn" href = "" id = "add"><i class = "fa-regular fa-plus"></i></a>
+            <a class = "btn-author" id = "append">Войти<i class = "fa-solid fa-door-open"></i></a>
         </header>
         <main></main>
         <footer>
@@ -39,10 +41,52 @@
                     <input type = "text" name = "img_link" placeholder = "Ссылка на фото">
                     <button type = "submit">Добавить котика</button>
                 </form>
-
             </div>
         </div>
+        <div class = "form_author">
+            <div class = "author" id = "author-form">
+                <div class = "author_form-close btn"><i class = "fa-solid fa-xmark"></i></div>
+                <h3>Войти в аккаунт</h3>
+                <form class = "form_author_style">
+                  <input type = "text" name = "name_author" required placeholder = "Введите Ваше имя">
+                  <input type = "password" name = "author_pass" required placeholder="Введите пароль">
+                  <button class = "form_author_button" type = "submit">Войти</button> 
+                </form>
+           </div>
+        </div>
+        <div class = "popup-cat-wrapper">
+            <div class = "popup_container">
+                <div class = "popup_close-cat"><button class = "btn"><i class = "fa-solid fa-xmark"></i></button>
+                <h2>Выбранный питомец</h2>
+                </div>
+              <form action = "" id = "cat-info"> 
+         <div class = "div1">
+                    <span class = "id cat-id"></span>
+        </div>
+            <div class = "div2"><img class = "img_link img-cat"></div>
+
+            <div class = "div3">
+                 <label>Имя питомца:<span class = "name"></span></label>
+            </div>  
+                <div class = "div4">
+                    <label>Возраст питомца:<span class = "age"></span>
+                </div>
+                 <div class = "div5"> 
+                    <label>Рейтинг питомца:<span class = "rate" min = "0" max = "10"></span></label>
+                 </div>   
+                <div class = "div6">    
+                 <label>Любимчик:<span id = "favourite"></span><i class="fa-solid fa-heart"></i></label>
+            </div>   
+            <div class = "div7">
+                 <label>Описание питомца:<p class = "description"></p></label>
+            </div>
+            
+            
+                </form>
+            </div>         
+        </div>       
     </body>
-    <script src = "scripts/cats.js"></script>
     <script src = "scripts/index.js"></script> 
+    <script src = "scripts/form_author.js"></script> 
+    <script src = "scripts/cats-info.js"></script>
 </html>
